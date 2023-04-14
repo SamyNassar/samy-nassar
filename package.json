@@ -22,8 +22,6 @@
     "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
-    "bluebird": "^3.7.2",
-    "loader-utils": "^3.2.1",
-    "typed.js": "^2.0.15"
+    "loader-utils": "^3.2.1"
   }
 }
