@@ -15,6 +15,9 @@ function writer(target, text, i, interval, resolve) {
       } else if (endOfBlock.test(currentChar + nextChar)) { // if current and next characters match end of block regex
         pauseDuration *= 15;
       }
+
+      // Ensure we stay scrolled to the bottom.
+      target.scrollTop = target.scrollHeight;
   
       setTimeout(function() {
         target.innerHTML += currentChar;
