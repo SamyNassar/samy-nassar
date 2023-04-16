@@ -1,6 +1,8 @@
-
+import workText from '!raw-loader!./resources/work.txt';
 import preStyles from 'raw-loader!./prestyles.css';
 import typeWriter from './lib/typeWriter';
+import getBrowserPrefix from './lib/getBrowserPrefix';
+let styleText = [0, 1, 2, 3].map((i) => require('raw-loader!./resources/styles' + i + '.css').default);
 
 
 let style, editorEl, workEl, terminalEl, skipAnimationEl, pauseEl, observer;
@@ -12,6 +14,12 @@ let browserPrefix;
 
 // Wait for load to get started.
 document.addEventListener("DOMContentLoaded", function() {
+  // Put the proper prefix for the styles.
+  const browserPrefix = getBrowserPrefix();
+    styleText = styleText.map(function(text) {
+        return text.replace(/-webkit-/g, browserPrefix);
+    });
+
   getEls();
   createEventHandlers();
   startAnimation();
@@ -44,10 +52,7 @@ const createEventHandlers = () => {
     for (const mutation of mutationList) {
       if (mutation.type === "childList") {
         // Update page style.
-        style.textContent = mutation.target.textContent;
-
-        // Ensure we stay scrolled to the bottom.
-        editorEl.scrollTop = editorEl.scrollHeight;
+        // style.textContent = mutation.target.textContent;
       }
     }
   });
@@ -60,11 +65,12 @@ const createEventHandlers = () => {
 
 
 const startAnimation = async () => {
-  const interval = 0
-
-  await typeWriter(editor, "text1\n", interval);
+  const interval = 5
+  console.log(style)
+  await typeWriter(editorEl, styleText[0], interval, style);
+  await typeWriter(workEl, workText, interval);
   console.log("here")
-  await typeWriter(editor, "text2", interval);
+  await typeWriter(editorEl, styleText[1], interval, style);
 
 }
 
