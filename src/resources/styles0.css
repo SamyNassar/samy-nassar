@@ -1,0 +1,131 @@
+/**
+ *
+ * Welcome to my website👋!
+ * My name is Samy Nassar a software engineer👨‍💻. 
+ *
+ * I build an interactive websites.
+ * How about some live coding?
+ */
+
+/**
+ * let's make this page a little more interesting with some animations🙄. 
+ * Hold on to your hats🤠!
+ */
+
+* {
+  -webkit-transition: all 2s;
+}
+
+/**
+ * That was just the beginning. 
+ *
+ * Let's spice up the background with a cool color🎨.
+ * So let's do something about it.
+ */
+
+html {
+  background: rgb(59, 77, 94);
+}
+
+/**
+ * Hold on...
+ */
+
+pre, a {
+  color: white;
+}
+
+/**
+ * Much better!
+ * Sorry about your eyes👀. 
+ * Now, let's create a nice area for us to work in instead of this blank white space.
+ */
+
+pre:not(:empty) {
+  overflow: auto;
+  background: rgb(48, 47, 47);
+  border: 1px solid #ccc;
+  max-height: 45vh;
+  width: 49%;
+  font-size: 1rem;
+  font-family: monospace;
+  padding: 1vh 0.5vw;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  white-space: pre-wrap;
+  outline: 0;
+  margin: 1vh 0.5vw;
+}
+
+
+/**
+ * Okay, now that we have a comfortable space to work in.
+ * Let's get down to business. 
+ * Here's where the real magic happens✨.
+ */
+
+#editor {
+  -webkit-transform: translateX(95%);
+  position: absolute;
+}
+
+/**
+ * This is good, but all the text is white!
+ * Let's make it even more readable.
+ */
+
+.comment       { color: #8b846b; font-style: italic; }
+.selector      { color: #e49c0c; }
+.selector .key { color: #62d8ec; }
+.key           { color: #62d8ec; }
+.value         { color: #bc7ef1; }
+.value.px      { color: #f3206a; }
+
+/**
+ * Wow, that was a lot of code. 
+ * I hope you were able to follow along. 
+ * Let's take a step back and get a better perspective on things.
+ */
+
+
+
+#editor {
+  -webkit-transform: translateX(98%) rotateY(-10deg);
+  -webkit-transform-origin: right;
+  max-height: 93.1vh;
+}
+
+/**
+ * Yo, check out that nauseating scroll bar🤢.
+ * Fear not, my friend! I will swiftly sprint into action🏃‍♂️ and upgrade it for you🚀.
+ * 
+ */
+
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(75, 72, 72);
+  border: 3px solid transparent;
+  border-radius: 1rem;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(85, 82, 82);
+}
+
+/**
+ * So, let's talk projects. That's why you're here, right?
+ * I can't imagine you'd come just to see the pretty colors🤔.
+ */
+
+pre:not(#editor) {
+  -webkit-transform: rotateY(10deg);
+  -webkit-transform-origin: left;
+}
