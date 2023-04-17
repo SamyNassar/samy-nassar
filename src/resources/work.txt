@@ -1,0 +1,28 @@
+samynassar.tech
+=========
+
+Samy Nassar
+Undergraduate Software Engineer
+Full-Stack / NodeJS / Machine Learning
+
+Contact
+-------
+
+* samynassar996 (at) gmail (dot) com
+* [in/SamyNassar](https://www.linkedin.com/in/samynassar/) on linkedin
+* [@SamyNassar](https://github.com/SamyNassar) on Github
+* SamyNassar#8136 on Discord
+
+
+Projects
+--------
+
+* GithubTrendingLanguages: A web app that displays trending programming languages on GitHub in the last 30 days.
+* Evaluate-news: A full-stack application that performs sentiment analysis. Built with Node.js, Jest, Webpack, SCSS, service workers, and MeaningCloud APIs.
+* IEEE-Website: Contributed to the IEEE Zagazig Student Branch website using Vue.js.
+* NewsApp: A native Android application that retrieves the latest news using Java and the Guardian APIs.
+* InventoryApp: An Android application for storing items using Java, XML, and SQLite.
+* topology-api: A Java API for operating with electronic topologies in JSON format.
+* Function-Plotter: A desktop application with a GUI for plotting mathematical functions using tkinter for GUI, NumPy, and Matplotlib for mathematical and plotting functions.
+
+
