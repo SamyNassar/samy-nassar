@@ -9,7 +9,7 @@ let style, editorEl, workEl, terminalEl, skipAnimationEl, pauseEl, observer;
 let animationSkipped = false, done = false, paused = false;
 let browserPrefix;
 
-
+import { marked } from 'marked';
 
 
 // Wait for load to get started.
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
   getEls();
-  createEventHandlers();
+  // createEventHandlers();
   startAnimation();
 });
 
@@ -61,20 +61,13 @@ const createEventHandlers = () => {
   observer.observe(editorEl, config);
 }
 
-
-
-
 const startAnimation = async () => {
-  const interval = 5
-  console.log(style)
+  const interval = 10
+
   await typeWriter(editorEl, styleText[0], interval, style);
   await typeWriter(workEl, workText, interval);
-  console.log("here")
   await typeWriter(editorEl, styleText[1], interval, style);
-
+  const md2html = marked.parse(workText);
+  workEl.innerHTML = md2html
+  workEl.classList.toggle('show')
 }
-
-
-
-
-

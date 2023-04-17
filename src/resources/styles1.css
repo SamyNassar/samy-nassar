@@ -2,19 +2,7 @@
 /**
  * That markdown on the left doesn't look great.
  * Let's render it.
- */
-
-#work.flipped {
-  -webkit-transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg);
-}
-
-#work .md {
-  -webkit-transform: rotateY(190deg) rotateZ(180deg);
-  margin-top: 800px;
-}
-
-/**
- * Alright. We're ready.
+ * Are you ready?
  *
  * 3...
  * 2...
@@ -28,3 +16,12 @@
  * Okay, now here we go for real this time! 
  *
  */
+
+#work {
+  opacity: 0;
+}
+
+#work.show {
+  opacity: 1;
+}
+
