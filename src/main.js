@@ -2,7 +2,7 @@ import workText from '!raw-loader!./resources/work.txt';
 import preStyles from 'raw-loader!./prestyles.css';
 import typeWriter from './lib/typeWriter';
 import getBrowserPrefix from './lib/getBrowserPrefix';
-let styleText = [0, 1, 2, 3].map((i) => require('raw-loader!./resources/styles' + i + '.css').default);
+let styleText = [0, 1].map((i) => require('raw-loader!./resources/styles' + i + '.css').default);
 
 
 let style, editorEl, workEl, terminalEl, skipAnimationEl, pauseEl, observer;
