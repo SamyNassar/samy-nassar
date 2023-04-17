@@ -1,7 +1,7 @@
 import textHandler from "./textHandler";
 
 const endOfSentence = /[\.\?\!]\s$/;
-const comma = /\D[\,]\s$/;
+const comma = /(?!\w),(?=\s)/;
 const endOfBlock = /[^\/]\n\n$/;
 
 function writer(target, text, i, interval, style, resolve) {
@@ -11,11 +11,11 @@ function writer(target, text, i, interval, style, resolve) {
       let pauseDuration = interval;
   
       if (endOfSentence.test(currentChar + nextChar)) { // if current and next characters match end of sentence regex
-        pauseDuration *= 200;
+        pauseDuration *= 100;
       } else if (comma.test(currentChar + nextChar)) { // if current and next characters match comma regex
-        pauseDuration *= 200;
+        pauseDuration *= 50;
       } else if (endOfBlock.test(currentChar + nextChar)) { // if current and next characters match end of block regex
-        pauseDuration *= 200;
+        pauseDuration *= 100;
       }
 
       const finalText = textHandler(target.innerHTML, currentChar)
@@ -23,7 +23,6 @@ function writer(target, text, i, interval, style, resolve) {
       if(style){
         style.textContent += currentChar
       }
-
 
       // Ensure we stay scrolled to the bottom.
       target.scrollTop = target.scrollHeight;
@@ -47,7 +46,6 @@ export default function typeWriter(target, text, interval, style) {
     // Wrap the writer function inside a Promise
     return new Promise(resolve => {
         // Call the writer function with the resolve callback to signal completion
-        console.log(style)
         writer(target, text, 0, interval, style, resolve);
     });
 }
