@@ -23,7 +23,7 @@ function writer(target, text, i, interval, style, resolve) {
     let pauseDuration = interval;
 
     if (endOfSentence.test(currentChar + nextChar)) { // if current and next characters match end of sentence regex
-      pauseDuration *= 100;
+      pauseDuration *= 400;
     } else if (endOfBlock.test(currentChar + nextChar)) { // if current and next characters match end of block regex
       pauseDuration *= 100;
     }
