@@ -4,7 +4,7 @@ import typeWriter from './lib/typeWriter';
 import { skipAnim, isAnimationSkiped } from './lib/typeWriter';
 import getBrowserPrefix from './lib/getBrowserPrefix';
 let styleText = [0, 1, 2, 3].map((i) => require('raw-loader!./resources/styles' + i + '.css').default);
-
+import contactHTML from 'raw-loader!./contact.html';
 
 let style, editorEl, workEl, contactEl, skipAnimationEl, pauseEl;
 let browserPrefix;
@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
     styleText = styleText.map(function(text) {
         return text.replace(/-webkit-/g, browserPrefix);
     });
-
   getEls();
+  addContactForm();
   createEventHandlers();
   startAnimation();
 });
@@ -42,6 +42,11 @@ const getEls = () => {
   contactEl = document.getElementById('contact-me');
   skipAnimationEl = document.getElementById('skip');
 
+}
+
+const addContactForm = () => {
+  let contact = document.getElementById('contact-me');
+  contact.innerHTML = contactHTML;
 }
 
 const createEventHandlers = () => {
