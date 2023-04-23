@@ -20,8 +20,3 @@
 #work {
   opacity: 0;
 }
-
-#work.show {
-  opacity: 1;
-}
-

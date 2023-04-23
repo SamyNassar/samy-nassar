@@ -1,0 +1,21 @@
+
+/**
+*...
+*/
+
+#work {
+  opacity: 1;
+}
+
+
+/**
+* Now we're talking! Our text is looking sharp.
+* If you need to get in touch, a contact form are available on the left.
+*
+*/
+
+#contact-me{
+  opacity: 1;
+  width: 49%;
+  height: 40vh;
+}

@@ -1,9 +1,9 @@
 /**
  *
  * Welcome to my website👋!
- * I'm Samy Nassar, a software engineer👨‍💻. 
+ * I'm Samy Nassar. a software engineer👨‍💻. 
  *
- * I build an interactive websites.
+ * This is my interactive websites.
  * How about some live coding?
  */
 
@@ -16,6 +16,7 @@
   -webkit-transition: all 2s;
 }
 
+
 /**
  * That was just the beginning. 
  *
@@ -27,6 +28,7 @@ html {
   background: rgb(59, 77, 94);
 }
 
+
 /**
  * Hold on...
  */
@@ -34,6 +36,7 @@ html {
 pre, a {
   color: white;
 }
+
 
 /**
  * Much better!
@@ -45,7 +48,7 @@ pre:not(:empty) {
   overflow: auto;
   background: rgb(48, 47, 47);
   border: 1px solid #ccc;
-  max-height: 45vh;
+  max-height: 40vh;
   width: 49%;
   font-size: 1rem;
   font-family: monospace;
@@ -68,6 +71,7 @@ pre:not(:empty) {
   position: absolute;
 }
 
+
 /**
  * This is good, but all the text is white!
  * Let's make it even more readable.
@@ -80,13 +84,12 @@ pre:not(:empty) {
 .value         { color: #bc7ef1; }
 .value.px      { color: #f3206a; }
 
+
 /**
  * Wow, that was a lot of code. 
  * I hope you were able to follow along. 
  * Let's take a step back and get a better perspective on things.
  */
-
-
 
 #editor {
   -webkit-transform: translateX(98%) rotateY(-10deg);
@@ -94,12 +97,12 @@ pre:not(:empty) {
   max-height: 93.1vh;
 }
 
+
 /**
- * Yo, check out that nauseating scroll bar🤢.
+ * Yo. check out that nauseating scroll bar🤢.
  * Fear not, my friend! I will swiftly sprint into action🏃‍♂️ and upgrade it for you🚀.
  * 
  */
-
 
 ::-webkit-scrollbar {
   width: 1rem;
@@ -119,6 +122,7 @@ pre:not(:empty) {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(85, 82, 82);
 }
+
 
 /**
  * So, let's talk projects. That's why you're here, right?
