@@ -63,6 +63,10 @@ const createEventHandlers = () => {
   // // Start observing the target node for configured mutations
   // observer.observe(editorEl, config);
 
+  editorEl.addEventListener("input", (e) => {
+    style.textContent = editorEl.textContent;
+  });
+
   skipAnimationEl.addEventListener("click", (e) => {
     e.preventDefault();
     skipAnim()
@@ -97,6 +101,7 @@ const startAnimation = async () => {
     skipAnimation()
   }
 
+  editorEl.setAttribute("contenteditable", true)
   pauseEl.style.display = "none";
   skipAnimationEl.style.display = "none"
 
