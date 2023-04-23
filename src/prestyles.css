@@ -58,3 +58,14 @@ blockquote{
 p{
     margin-top: 0px;
 }
+
+
+/* styling footer */
+footer{
+    position: absolute;
+    height: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 10px;
+}
