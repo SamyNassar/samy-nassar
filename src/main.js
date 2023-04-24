@@ -80,16 +80,23 @@ const startAnimation = async () => {
   await typeWriter(editorEl, styleText[0], interval, style);
   await typeWriter(workEl, workText, 0);
   await typeWriter(editorEl, styleText[1], interval, style);
-  workEl.innerHTML = md2html;
-  await typeWriter(editorEl, styleText[2], interval, style);
-  await typeWriter(editorEl, styleText[3], interval, style);
-
-  if(isAnimationSkiped){
-    skipAnimation()
+  if(!isAnimationSkiped()){
+    setTimeout(async ()=>{
+      workEl.innerHTML = md2html;
+      workEl.scrollTop = 0; // Stay at the top.
+      await typeWriter(editorEl, styleText[2], interval, style);
+      await typeWriter(editorEl, styleText[3], interval, style);
+    }, 2000)
   }
 
-  editorEl.setAttribute("contenteditable", true)
-  skipAnimationEl.style.display = "none"
+  if(isAnimationSkiped()){
+    skipAnimation();
+  } else{
+    editorEl.scrollTop = editorEl.scrollHeight;
+  }
+
+  editorEl.setAttribute("contenteditable", true);
+  skipAnimationEl.style.display = "none";
 
 }
 
@@ -101,6 +108,8 @@ function skipAnimation() {
   style.textContent = fullText;
   style.textContent += "\n* { " + browserPrefix + "transition: 0.25s; } \n";
 
+  workEl.innerHTML = md2html;
+
   let editorHTML = "";
 
   // Convert txt to html.
@@ -110,4 +119,3 @@ function skipAnimation() {
 
   editorEl.innerHTML = editorHTML;
 }
-
