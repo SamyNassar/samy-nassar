@@ -1,13 +1,19 @@
 {
+  "homepage": "https://samynassar.github.io/samy-nassar/",
   "name": "samy-nassar",
   "version": "1.0.0",
   "description": "My personal webpage",
+  "repository": {
+    "url": "git+https://github.com/SamyNassar/samy-nassar.git"
+  },
   "main": "main.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve",
-    "watch": "webpack --progress --watch"
+    "watch": "webpack --progress --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Samy Nassar <samynassar996@gmail.com>",
   "license": "ISC",
@@ -15,6 +21,7 @@
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "babel-loader": "^9.1.2",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "raw-loader": "^4.0.2",
     "webpack": "^5.79.0",
