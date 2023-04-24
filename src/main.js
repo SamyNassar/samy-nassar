@@ -13,7 +13,7 @@ const md2html = marked.parse(workText);
 
 import { marked } from 'marked';
 import textHandler from './lib/textHandler';
-
+import pasteAsPlainText from 'paste-as-plain-text';
 
 // Wait for load to get started.
 document.addEventListener("DOMContentLoaded", function() {
@@ -58,6 +58,11 @@ const createEventHandlers = () => {
     e.preventDefault();
     skipAnim()
   })
+
+  // Handle the `paste` event
+  pasteAsPlainText(
+    editorEl
+  );
   
 }
 

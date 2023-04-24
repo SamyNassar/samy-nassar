@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "loader-utils": "^3.2.1",
-    "marked": "^4.3.0"
+    "marked": "^4.3.0",
+    "paste-as-plain-text": "^1.0.2"
   }
 }
