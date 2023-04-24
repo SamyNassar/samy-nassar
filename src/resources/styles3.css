@@ -1,43 +1,18 @@
 
-/**
- * ..
- * Almost there, let's add some final touches.
- */
-
- pre:hover{
-  box-shadow: 0px 0px 40px 5px rgba(255,255,255,0.4);
+#work {
+  opacity: 1;
 }
 
 
 /**
- * And that's a wrap!
- * You've reached the end of this page,
- * I hope it was fun and informative.
- * Don't hesitate to come back again, 
- * or share with your friends! 
- */
+* Now we're talking! Our text is looking sharp.
+* If you need to get in touch, a contact form are available on the left.
+*
+*/
 
-/**
- * Psst...you can customize this box too. Give it some personality with CSS!
- *
- * For example,
- *
- * The property 'background-image' can use a 'linear-gradient' which takes the parameters:
- * (direction, color-stop1, color-stop2, ...).
- *
- * So if I wanted to change the html color,
- * I could place a linear-gradient with any two color I want.
- * like this:
- */
-
-html {
-  background-image: linear-gradient(to right top, rgb(96, 104, 112), rgb(59, 77, 94));
+#contact-me{
+  display: block;
+  opacity: 1;
+  width: 49%;
+  height: 40vh;
 }
-
-/**
- * Try it out! There's lots you can do.
- * Have fun and keep coding😉!
- * No judgment here❤️. 
- */
-
-

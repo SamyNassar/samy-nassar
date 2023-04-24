@@ -3,7 +3,7 @@ import preStyles from 'raw-loader!./prestyles.css';
 import typeWriter from './lib/typeWriter';
 import { skipAnim, isAnimationSkiped } from './lib/typeWriter';
 import getBrowserPrefix from './lib/getBrowserPrefix';
-let styleText = [0, 1, 2, 3].map((i) => require('raw-loader!./resources/styles' + i + '.css').default);
+let styleText = [0, 1, 2, 3, 4].map((i) => require('raw-loader!./resources/styles' + i + '.css').default);
 import contactHTML from 'raw-loader!./contact.html';
 
 let style, editorEl, workEl, contactEl, skipAnimationEl, pauseEl;
@@ -85,14 +85,11 @@ const startAnimation = async () => {
   await typeWriter(editorEl, styleText[0], interval, style);
   await typeWriter(workEl, workText, 0);
   await typeWriter(editorEl, styleText[1], interval, style);
-  if(!isAnimationSkiped()){
-    setTimeout(async ()=>{
-      workEl.innerHTML = md2html;
-      workEl.scrollTop = 0; // Stay at the top.
-      await typeWriter(editorEl, styleText[2], interval, style);
-      await typeWriter(editorEl, styleText[3], interval, style);
-    }, 2000)
-  }
+  await typeWriter(editorEl, styleText[2], interval, style);
+  workEl.innerHTML = md2html;
+  workEl.scrollTop = 0; // Stay at the top.
+  await typeWriter(editorEl, styleText[3], interval, style);
+  await typeWriter(editorEl, styleText[4], interval, style);
 
   if(isAnimationSkiped()){
     skipAnimation();
