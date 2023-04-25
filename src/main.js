@@ -5,11 +5,12 @@ import { skipAnim, isAnimationSkiped } from './lib/typeWriter';
 import getBrowserPrefix from './lib/getBrowserPrefix';
 let styleText = [0, 1, 2, 3, 4].map((i) => require('raw-loader!./resources/styles' + i + '.css').default);
 import contactHTML from 'raw-loader!./contact.html';
+import addTargetBlank from './lib/addTargetBlank';
 
-let style, editorEl, workEl, contactEl, skipAnimationEl, pauseEl;
+let style, editorEl, workEl, contactEl, skipAnimationEl;
 let browserPrefix;
 
-const md2html = marked.parse(workText);
+const md2html = addTargetBlank(marked.parse(workText));
 
 import { marked } from 'marked';
 import textHandler from './lib/textHandler';
