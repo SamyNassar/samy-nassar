@@ -1,7 +1,6 @@
 # Samy Nassar
 
-A geek who thrives on problem-solving and has a passion for constantly expanding his knowledge of all things tech. From mobile and web development to machine learning and data science, I've got a wide range of interests and hands-on experience. My foundation in the core sciences—algorithms, data structures, networking, and databases—is rock-solid, and I'm always up for a challenge!
-
+As an enthusiastic problem-solver with a deep-rooted interest in the ever-evolving realm of technology, I possess a diverse set of skills and knowledge in various areas such as mobile and web development, machine learning, and data science. My proficiency in fundamental sciences, including algorithms, data structures, networking, and databases, is unwavering, and I welcome any opportunity to push my boundaries and tackle new challenges.
 
 ## Contact
 
@@ -13,10 +12,12 @@ A geek who thrives on problem-solving and has a passion for constantly expanding
 
 ## Projects
 
-- **GithubTrendingLanguages:** A web app that displays trending programming languages on GitHub in the last 30 days.
-- **Evaluate-news:** A full-stack application that performs sentiment analysis. Built with Node.js, Jest, Webpack, SCSS, service workers, and MeaningCloud APIs.
-- **IEEE-Website:** Contributed to the IEEE Zagazig Student Branch website using Vue.js.
-- **NewsApp:** A native Android application that retrieves the latest news using Java and the Guardian APIs.
-- **InventoryApp:** An Android application for storing items using Java, XML, and SQLite.
-- **topology-api:** A Java API for operating with electronic topologies in JSON format.
-- **Function-Plotter:** A desktop application with a GUI for plotting mathematical functions using tkinter for GUI, NumPy, and Matplotlib for mathematical and plotting functions.
+- **Data Acquisition System for SSVEP-Based BCIs:** A system provides a graphical user interface (GUI) for controlling the stimulation and data acquisition process. It utilizes Python and various libraries, including Pygame, CyKit, and emokit, to communicate with EEG acquisition hardware and extract EEG data.
+- [**MovParty:**](https://github.com/SamyNassar/movie-party) A web app that lets users watch local videos in sync with their friends. It uses Express and WebSockets for real-time communication and Jest for testing.
+- [**GithubTrendingLanguages:**](https://github.com/SamyNassar/github-trending-languages) A web app that fetches the current trending programming languages on GitHub and displays them on a webpage. It uses Node.js and Express on the backend to fetch the data and React on the frontend to display the data in a list. The application also includes some basic styling using Bootstrap.
+- [**Function-Plotter:**](https://github.com/SamyNassar/Function-Plotter) A desktop application with GUI to plot mathimatical function equations, with tkinter for GUI, numpy, and matplotlib for mathimatical and plotting stuff, and unittest for running tests to validate the input of the function.
+- [**Evaluate-news:**](https://github.com/SamyNassar/Evaluate-news) A web application that analyzes the sentiment of a given text. It uses Natural Language Processing (NLP) and the MeaningCloud Sentiment Analysis API to determine the overall sentiment. It is built using Node.js, Express.js, and Webpack on the backend, and Vanilla JavaScript, HTML, and SCSS on the frontend. It also uses Service Workers to cache assets and provide offline functionality.
+- [**Topology-api:**](https://github.com/SamyNassar/topology-api) This project is a Java library for managing network topologies. It provides a set of interfaces and classes for creating, modifying, and querying network topologies. it uses the Jackson library for JSON parsing and serialization and JUnit for unit testing.
+- [**IEEE-Website:**](https://github.com/SamyNassar/IEEE-Website) Contribute to IEEE Zagazig Student Branch website using VueJS.
+- [**NewsApp:**](https://github.com/SamyNassar/NewsApp) Native Android application which get the latest news using java and the Guardian APIs.
+- [**InventoryApp:**](https://github.com/SamyNassar/InventoryApp) Android application to store items using java, XML, SQLite.
